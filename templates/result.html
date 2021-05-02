@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+  <body>
+    <h1>{{msg}}</h1>
+    {% if obj %}
+    <h3>{{obj.name}}</h3>
+    <h3>{{obj.address}}</h3>
+    <h3>{{obj.age}}</h3>
+    <img src="{{obj.pic.url}}" alt="" width="500" />
+    <h3>Gender : {{obj.gender}}</h3>
+    <h3>Phone number : {{obj.phone}}</h3>
+    <h3>Email : {{obj.email}}</h3>
+
+    <h3>Adults : {{obj.adult}}</h3>
+    <h3>Children : {{obj.children}}</h3>
+    <h3>Room Preference : {{obj.checkin}}</h3>
+    <h3>Check-in Date : {{obj.indate}} </h3>
+    <h3>Check-in time : {{obj.intime}} </h3>
+    <h3>Check-out Date : {{obj.outdate}} </h3>
+    <h3>Check-out time : {{obj.outtime}} </h3>
+    <h3>Fun things to do : </h3>
+    {% if obj.c1 %}
+    <h3>   - Bicycle Rental (include additonal charges)</h3>
+    {% endif %} {% if obj.c2 %}
+    <h3>   - Cycling</h3>
+    {% endif %} {% if obj.c3 %}
+    <h3>   - Movie Nights</h3>
+    {% endif %} {% if obj.c4 %}
+    <h3>   - Walking Tours</h3>
+    {% endif %} {% if obj.c5 %}
+    <h3>   - Tour or Class about Local Culture</h3>
+    {% endif %}
+    {% endif %}
+
+  </body>
+</html>
